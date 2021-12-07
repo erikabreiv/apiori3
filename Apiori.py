@@ -1,24 +1,14 @@
 import streamlit as st
 import pandas as pd
-#from apriori import runApriori, dataFromFile, to_str_results
+from Apioricode import runApriori, dataFromFile, to_str_results
 
 st.markdown("# Apriori Streamlit")
 
-st.sidebar.markdown(
-    """The code attempts to implement the following paper:
-
-> *Agrawal, Rakesh, and Ramakrishnan Srikant. "Fast algorithms for mining association rules." Proc. 20th int. conf. very large data bases, VLDB. Vol. 1215. 1994.*
-"""
-)
-
 default_csv = st.selectbox(
-    "Select one of the sample csv files", ("INTEGRATED-DATASET.csv", "tesco.csv")
+    "Select one of the sample csv files", ( "Maxima.csv")
 )
 
-if default_csv == 'INTEGRATED-DATASET.csv':
-    st.markdown('''The dataset is a copy of the “Online directory of certified businesses with a detailed profile” file from the 
-    Small Business Services (SBS) dataset in the NYC Open Data Sets http://nycopendata.socrata.com/''')
-elif default_csv == 'tesco.csv':
+if default_csv == 'Maxima.csv':
     st.markdown('The dataset is a toy dataset contain frequently purchased grocery items')
 
 st.markdown('Here are some sample rows from the dataset')
