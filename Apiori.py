@@ -8,8 +8,6 @@ default_csv = st.selectbox(
     "Select one of the sample csv files", ( "Maxima.csv")
 )
 
-if default_csv == 'Maxima.csv':
-    st.markdown('The dataset is a toy dataset contain frequently purchased grocery items')
 
 st.markdown('Here are some sample rows from the dataset')
 csv_file = pd.read_csv(default_csv, header=None, sep="\n")
